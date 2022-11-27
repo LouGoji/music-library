@@ -1,11 +1,9 @@
 import React from 'react'
 import GalleryItem from './GalleryItem'
 
+function Gallery(props){
 
-const Gallery = (props) => {
-    const myData = props.data.result.read()
-
-    const display = myData.map((item, index) => {
+    const display = props.data.map((item, index) => {
         return (
             <GalleryItem item={item} key={index} />
         )
