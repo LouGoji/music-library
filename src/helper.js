@@ -1,7 +1,8 @@
-const fetchSearch = (searchTerm, path) => {
-    return fetch(`http://localhost:4000/${path}/${searchTerm}`)
-    .then(response => response.json())
-    .then(resData => resData.results)
+const API_URL = 'https://itunes.apple.com/search?term='
+const fetchSearch = async (search) => {
+    const response = await fetch(API_URL + search)
+    const resData = await response.json()
+    return resData.results
 }
 
 const wrapPromise = (promise) => {
