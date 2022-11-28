@@ -1,9 +1,9 @@
 import React, { useEffect, useState} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useEffect, useState, Suspense } from 'react'
 import Gallery from './components/Gallery'
 import SearchBar from './components/SearchBar'
-import AlbumView from './components/AlbumView'
-import ArtistView from './components/ArtistView'
+//import { createResource as fetchData } from './helper'
 
 function App() {
 	let [search, setSearch] = useState('')
@@ -50,6 +50,39 @@ function App() {
 			</Router>
 		</div>
   	);
-}
+// 	let [data, setData] = useState([null])
 
-export default App;
+// 	// const API_URL = 'https://itunes.apple.com/search?term='
+
+// 	useEffect(() => {
+// 		if (search) {
+// 			setData(fetchData(search))
+// 		}
+// 	}, [search])
+
+
+// 	const handleSearch = (e, term) => {
+// 		e.preventDefault()
+// 		setSearch(term)
+// 	}
+
+// 	const renderGallery = () => {
+// 		if (data) {
+// 			return (
+// 				<Suspense fallback={<h1>Loading...</h1>}>
+// 					<Gallery data={data} />
+// 				</Suspense>
+// 			)
+// 		}
+// 	}
+
+// 	return (
+// 		<div className="App">
+// 			<SearchBar handleSearch={handleSearch} />
+// 			{message}
+// 			{renderGallery()}
+// 		</div>
+// 	);
+// }
+
+export default App
