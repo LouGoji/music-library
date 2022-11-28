@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
+=======
+import { useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+>>>>>>> with_router
 
 function AlbumView() {
     const { id } = useParams()
@@ -45,4 +50,8 @@ function AlbumView() {
     )
 }
 
+<<<<<<< HEAD
 export default AlbumView
+=======
+export default AlbumView
+>>>>>>> with_router

@@ -11,21 +11,27 @@ function Gallery(props) {
     })
 =======
 import React, { useContext } from 'react'
-import Galleryitem from './GalleryItem';
+import GalleryItem from './GalleryItem'
 
+const Gallery = (props) => {
+
+    const display = props.data.map((item, index) => {
+        return (
+            <GalleryItem key={index} item={item} />
+        )
+    })
+
+<<<<<<< HEAD
 function Gallery(props) {
   const display = props.data.map((item, index) => {
 >>>>>>> with_router
+=======
+>>>>>>> with_router
     return (
-      <Galleryitem item={item} key={index}/>
+        <div>
+            {display}
+        </div>
     )
-  })
-
-  return (
-    <div>
-        {display}
-    </div>
-  )
 }
 
 export default Gallery

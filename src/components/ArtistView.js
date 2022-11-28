@@ -1,11 +1,29 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
+=======
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate, Link } from 'react-router-dom'
+>>>>>>> with_router
 
 function ArtistView() {
     const { id } = useParams()
     const [artistData, setArtistData] = useState([])
     const navigate = useNavigate()
 
+<<<<<<< HEAD
+=======
+    const navButtons = () => {
+        return(
+            <div>
+                <button onClick={()=> navigate(-1)}>Back</button>
+                |
+                <button onClick={()=> navigate('/')}>Home</button>
+            </div>
+        )
+    }
+
+>>>>>>> with_router
     useEffect(() => {
         const API_URL = `http://localhost:4000/album/${id}`
         const fetchData = async () => {
@@ -25,6 +43,7 @@ function ArtistView() {
             </div>
         )
     })
+<<<<<<< HEAD
     const navButtons = () => {
         return(
             <div>
@@ -36,6 +55,8 @@ function ArtistView() {
     }
     
     
+=======
+>>>>>>> with_router
     return (
         <div>
             {/* <h2>The id passed was: {id}</h2> */}
@@ -46,4 +67,8 @@ function ArtistView() {
     )
 }
 
+<<<<<<< HEAD
 export default ArtistView
+=======
+export default ArtistView
+>>>>>>> with_router

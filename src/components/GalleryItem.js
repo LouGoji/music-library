@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function GalleryItem(props) {
+function GalleryItem(props){
     let [view, setView] = useState(false)
 
     const simpleStyle = {
@@ -21,7 +21,7 @@ function GalleryItem(props) {
         'backgroundSize': 'cover',
         'color': 'yellow'
     }
-    
+
     const simpleView = () => {
         return (
             <div style={simpleStyle}>
@@ -31,6 +31,9 @@ function GalleryItem(props) {
         )
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> with_router
 
     const detailView = () => {
         return (
@@ -42,7 +45,11 @@ function GalleryItem(props) {
                     </Link>
                 </h3>
                 <h3>
+<<<<<<< HEAD
                     <Link to={`.albums/${props.item.collectionId}`}>
+=======
+                    <Link to={`/album/${props.item.collectionId}`}>
+>>>>>>> with_router
                         {props.item.collectionName}
                     </Link>
                 </h3>
@@ -51,6 +58,7 @@ function GalleryItem(props) {
             </div>
         )
     }
+<<<<<<< HEAD
 
     return (
         <div onClick={ () => setView(!view)} 
@@ -78,19 +86,21 @@ const detailView = () => {
         </div>
     )
 }
+=======
+>>>>>>> with_router
 
 <<<<<<< HEAD
 =======
     return (
-        <div onClick={() => setView(!view)}
-        style={{'display': 'inline-block'}}>
-        
+        <div onClick={() =>setView(!view)} style={{'display': 'inline-block'}}>
             {/* This simple ternary shows the simple view when 'view' is false! */}
             {view ? detailView() : simpleView()}
-
         </div>
     )
-
 }
+<<<<<<< HEAD
+>>>>>>> with_router
+=======
+
 >>>>>>> with_router
 export default GalleryItem
